@@ -1,0 +1,47 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            required
+            [(ngModel)]="pet.nome"
+            name="nome"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Tipo</label>
+          <input
+            class="form-control"
+            id="tipo"
+            required
+            [(ngModel)]="pet.tipo"
+            name="tipo"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Idade</label>
+          <input
+            class="form-control"
+            id="idade"
+            required
+            [(ngModel)]="pet.idade"
+            name="idade"
+          />
+        </div>
+  
+        <button (click)="savePet()" class="btn btn-success">Enviar</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Pet adicionado com sucesso!</h4>
+        <button class="btn btn-success" (click)="newPet()">Adicionar</button>
+      </div>
+    </div>
+  </div>
+  

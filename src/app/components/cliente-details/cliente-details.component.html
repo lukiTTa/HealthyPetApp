@@ -1,0 +1,65 @@
+<div>
+  <div *ngIf="currentCliente.id" class="edit-form">
+    <h4>Cliente</h4>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          [(ngModel)]="currentCliente.nome"
+          name="nome"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">E-mail</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          [(ngModel)]="currentCliente.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Telefone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tel"
+          [(ngModel)]="currentCliente.telefone"
+          name="tel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Endereço</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentCliente.endereco"
+          name="description"
+        />
+      </div>
+    </form>
+
+    <button class="badge badge-danger mr-2" (click)="deleteCliente()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateCliente()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentCliente.id">
+    <br />
+    <p>Não foi possível acessar o Cliente...</p>
+  </div>
+</div>
