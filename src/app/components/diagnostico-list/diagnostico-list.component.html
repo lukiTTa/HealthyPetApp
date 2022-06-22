@@ -1,0 +1,46 @@
+<div class="list row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-6">
+        <h4>Lista de Diagnósticos</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let diagnostico of diagnosticos; let i = index"
+                [class.active]="i == currentIndex" (click)="setActiveDiagnostico(diagnostico, i)">
+                {{ diagnostico.data }} - {{diagnostico.pet}}
+            </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllDiagnosticos()">
+            Remover todos os diagnosticos
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentDiagnostico">
+            <h4>Diagnóstico</h4>
+            <div>
+                <label><strong>Data:</strong></label>
+                {{ currentDiagnostico.data }}
+            </div>
+            <div>
+                <label><strong>Pet:</strong></label> {{ currentDiagnostico.pet }}
+            </div>
+            <div>
+                <label><strong>Doença:</strong></label>
+                {{ currentDiagnostico.doenca }}
+            </div>
+            <div>
+                <label><strong>Comentarios:</strong></label>
+                {{ currentDiagnostico.comentarios }}
+            </div>
+
+            <a class="badge badge-warning" routerLink="/diagnosticos/{{ currentDiagnostico.id }}">
+                Editar
+            </a>
+        </div>
+
+        <div *ngIf="!currentDiagnostico">
+            <br />
+            <p>Por favor selecione um Diagnóstico.</p>
+        </div>
+    </div>
+</div>

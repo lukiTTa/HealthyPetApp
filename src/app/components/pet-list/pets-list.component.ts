@@ -37,8 +37,8 @@ export class PetsListComponent implements OnInit {
     this.currentIndex = -1;
   }
 
-  setActivePet(cliente: Pet, index: number): void {
-    this.currentPet = cliente;
+  setActivePet(pet: Pet, index: number): void {
+    this.currentPet = pet;
     this.currentIndex = index;
   }
 

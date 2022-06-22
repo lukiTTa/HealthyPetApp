@@ -1,0 +1,39 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Data</label>
+        <input type="date" class="form-control" id="data" [(ngModel)]="diagnostico.data" name="data" />
+      </div>
+
+      <div class="form-group">
+        <label for="website">Pet</label>
+        <select [(ngModel)]="diagnostico.pet" class="form-control">
+          <option disabled>Selecione um Pet</option>
+          <option>Escolha um pet</option>
+          <option *ngFor="let pet of petList">{{pet}}</option>
+        </select>
+        <!-- <div *ngIf="f.website.touched && f.website.invalid" class="alert alert-danger">
+              <div *ngIf="f.website.errors.required">Name is required.</div>
+          </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="description">Doença</label>
+        <input class="form-control" id="doenca" required [(ngModel)]="diagnostico.doenca" name="doenca" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Comentários</label>
+        <input class="form-control" id="comentarios" required [(ngModel)]="diagnostico.comentarios" name="comentarios" />
+      </div>
+
+      <button (click)="saveDiagnostico()" class="btn btn-success">Enviar</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Diagnóstico adicionado com sucesso!</h4>
+      <button class="btn btn-success" (click)="newDiagnostico()">Adicionar</button>
+    </div>
+  </div>
+</div>
