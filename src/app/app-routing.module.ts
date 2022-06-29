@@ -10,6 +10,9 @@ import { PetDetailsComponent } from './components/pet-details/pet-details.compon
 import { DiagnosticoListComponent } from './components/diagnostico-list/diagnostico-list.component';
 import { DiagnosticoDetailsComponent } from './components/diagnostico-details/diagnostico-details.component';
 import { DiagnosticoAddComponent } from './components/diagnostico-add/diagnostico-add.component';
+import { ConsultaListComponent } from './components/consulta-list/consulta-list.component';
+import { ConsultaDetailsComponent } from './components/consulta-details/consulta-details.component';
+import { ConsultaAddComponent } from './components/consulta-add/consulta-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -23,6 +26,9 @@ const routes: Routes = [
   { path: 'diagnosticos', component: DiagnosticoListComponent },
   { path: 'diagnosticos/:id', component: DiagnosticoDetailsComponent },
   { path: 'add-diagnosticos', component: DiagnosticoAddComponent },
+  { path: 'consultas', component: ConsultaListComponent },
+  { path: 'consultas/:id', component: ConsultaDetailsComponent },
+  { path: 'add-consultas', component: ConsultaAddComponent }
 ];
 
 @NgModule({

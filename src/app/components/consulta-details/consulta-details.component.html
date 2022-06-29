@@ -1,6 +1,6 @@
 <div>
-    <div *ngIf="currentDiagnostico.id" class="edit-form">
-      <h4>Diagnóstico</h4>
+    <div *ngIf="currentConsulta.id" class="edit-form">
+      <h4>Consulta</h4>
       <form>
         <div class="form-group">
           <label for="nome">Data</label>
@@ -9,7 +9,7 @@
             class="form-control"
             id="data"
             disabled
-            [(ngModel)]="currentDiagnostico.data"
+            [(ngModel)]="currentConsulta.data"
             name="data"
           />
         </div>
@@ -19,49 +19,49 @@
             type="text"
             class="form-control"
             id="pet"
-            [(ngModel)]="currentDiagnostico.pet"
+            [(ngModel)]="currentConsulta.pet"
             name="pet"
           />
         </div>
         <div class="form-group">
-          <label for="description">Doença</label>
+          <label for="description">Motivo</label>
           <input
             type="text"
             class="form-control"
-            id="doenca"
-            [(ngModel)]="currentDiagnostico.doenca"
-            name="doenca"
+            id="motivo"
+            [(ngModel)]="currentConsulta.motivo"
+            name="motivo"
           />
         </div>
         <div class="form-group">
-          <label for="description">Comentários</label>
+          <label for="description">Valor</label>
           <input
             type="text"
             class="form-control"
-            id="comentarios"
-            [(ngModel)]="currentDiagnostico.comentarios"
-            name="comentarios"
+            id="valor"
+            [(ngModel)]="currentConsulta.valor"
+            name="valor"
           />
         </div>
       </form>
   
-      <button class="badge badge-danger mr-2" (click)="deleteDiagnostico()">
+      <button class="badge badge-danger mr-2" (click)="deleteConsulta()">
         Delete
       </button>
   
       <button
         type="submit"
         class="badge badge-success mb-2"
-        (click)="updateDiagnostico()"
+        (click)="updateConsulta()"
       >
         Update
       </button>
       <p>{{ message }}</p>
     </div>
   
-    <div *ngIf="!currentDiagnostico.id">
+    <div *ngIf="!currentConsulta.id">
       <br />
-      <p>Não foi possível acessar o Diagnostico...</p>
+      <p>Não foi possível acessar a Consulta...</p>
     </div>
   </div>
   

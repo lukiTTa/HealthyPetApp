@@ -1,0 +1,46 @@
+<div class="list row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-6">
+        <h4>Lista de Consultas</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let consulta of consultas; let i = index"
+                [class.active]="i == currentIndex" (click)="setActiveConsulta(consulta, i)">
+                {{ consulta.data }} - {{consulta.pet}}
+            </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllConsultas()">
+            Remover todas as consultas
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentConsulta">
+            <h4>Consulta</h4>
+            <div>
+                <label><strong>Data:</strong></label>
+                {{ currentConsulta.data }}
+            </div>
+            <div>
+                <label><strong>Pet:</strong></label> {{ currentConsulta.pet }}
+            </div>
+            <div>
+                <label><strong>Motivo:</strong></label>
+                {{ currentConsulta.motivo }}
+            </div>
+            <div>
+                <label><strong>Valor:</strong></label>
+                R$ {{ currentConsulta.valor }}
+            </div>
+
+            <a class="badge badge-warning" routerLink="/consultas/{{ currentConsulta.id }}">
+                Editar
+            </a>
+        </div>
+
+        <div *ngIf="!currentConsulta">
+            <br />
+            <p>Por favor selecione uma Consulta.</p>
+        </div>
+    </div>
+</div>
