@@ -17,6 +17,9 @@ import { PetDetailsComponent } from './components/pet-details/pet-details.compon
 import { DiagnosticoAddComponent } from './components/diagnostico-add/diagnostico-add.component';
 import { DiagnosticoDetailsComponent } from './components/diagnostico-details/diagnostico-details.component';
 import { DiagnosticoListComponent } from './components/diagnostico-list/diagnostico-list.component';
+import { ConsultaAddComponent } from './components/consulta-add/consulta-add.component';
+import { ConsultaDetailsComponent } from './components/consulta-details/consulta-details.component';
+import { ConsultaListComponent } from './components/consulta-list/consulta-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { DiagnosticoListComponent } from './components/diagnostico-list/diagnost
     PetDetailsComponent,
     DiagnosticoAddComponent,
     DiagnosticoDetailsComponent,
-    DiagnosticoListComponent
+    DiagnosticoListComponent,
+    ConsultaAddComponent,
+    ConsultaDetailsComponent,
+    ConsultaListComponent
   ],
   imports: [
     BrowserModule,
