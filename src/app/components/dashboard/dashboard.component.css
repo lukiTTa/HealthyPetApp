@@ -1,12 +1,49 @@
-.dashboard {
-    background-image: url("../../../assets/images/dashboard-background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100vh;
-    height: auto;
+img { 
+    border-radius: 50%;
+    width: 120px;
+    margin-right: 5%;
 }
 
-p {
-    font-size: 150px;
-    color: rgb(232, 90, 240);
+.background {
+    background-color: bisque;
+}
+
+.pets {
+    padding: 45px;
+    text-align: center;
+    min-height: 25vh;
+    background-color: rgba(52, 202, 152, 0.426);
+    border-radius: 0 200px 200px 0;
+    border: 5px solid rgb(52, 202, 152);
+    font-size: 30px;
+}
+
+.clientes {
+    padding: 45px;
+    text-align: center;
+    min-height: 25vh;
+    background-color: rgba(202, 52, 99, 0.426);
+    border-radius: 0 200px 200px 0;
+    border: 5px solid rgb(202, 52, 99);
+    font-size: 30px;
+}
+
+.consultas {
+    padding: 45px;
+    text-align: center;
+    min-height: 25vh;
+    background-color: rgba(202, 199, 52, 0.426);
+    border-radius: 0 200px 200px 0;
+    border: 5px solid rgb(202, 199, 52);
+    font-size: 30px;
+}
+
+.diagnosticos {
+    padding: 45px;
+    text-align: center;
+    min-height: 25vh;
+    background-color: rgba(99, 202, 52, 0.426);
+    border-radius: 0 200px 200px 0;
+    border: 5px solid rgb(99, 202, 52);
+    font-size: 30px;
 }

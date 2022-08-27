@@ -1,15 +1,9 @@
-# HealthyPet - Frontend
-Aplicação desenvolvida em Angular 11 para a disciplina de Gestão de Projetos de Software, UNIFEI 2022.
+# Angular 11: COM212 - HealthyPet Front-end
 
-# Descrição
-Um frontend simples para geração de CRUDs relacionados a uma clínica veterinária.   
-A ideia essencial da execução do projeto era o acompanhamento do cronograma e da elaboração dos documentos relacionados a um projeto real, como DRE e Status Report.  
-O projeto tem seu backend feito em NodeJS e pode ser encontrado neste repositório:  
-https://github.com/lukiTTa/HealthyPetApi
+## Development server
 
-# Tecnologias
-A aplicação foi criada em Angular 11 com o sistema de routing enquanto a estilização foi feita com o bootstrap.
+Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
 
-# Fontes
-O projeto foi baseado no projeto e no tutorial do Bezkoder, que pode ser encontrado neste link:  
-https://www.bezkoder.com/angular-11-node-js-express-postgresql/
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.

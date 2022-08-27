@@ -1,0 +1,67 @@
+<div>
+    <div *ngIf="currentDiagnostico.id" class="edit-form">
+      <h4>Diagnóstico</h4>
+      <form>
+        <div class="form-group">
+          <label for="nome">Data</label>
+          <input
+            type="text"
+            class="form-control"
+            id="data"
+            disabled
+            [(ngModel)]="currentDiagnostico.data"
+            name="data"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Pet</label>
+          <input
+            type="text"
+            class="form-control"
+            id="pet"
+            [(ngModel)]="currentDiagnostico.pet"
+            name="pet"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Doença</label>
+          <input
+            type="text"
+            class="form-control"
+            id="doenca"
+            [(ngModel)]="currentDiagnostico.doenca"
+            name="doenca"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Comentários</label>
+          <input
+            type="text"
+            class="form-control"
+            id="comentarios"
+            [(ngModel)]="currentDiagnostico.comentarios"
+            name="comentarios"
+          />
+        </div>
+      </form>
+  
+      <button class="badge badge-danger mr-2" (click)="deleteDiagnostico()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateDiagnostico()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentDiagnostico.id">
+      <br />
+      <p>Não foi possível acessar o Diagnostico...</p>
+    </div>
+  </div>
+  
